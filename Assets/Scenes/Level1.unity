@@ -118,9 +118,9 @@ GameObject:
   - component: {fileID: 40014}
   - component: {fileID: 40013}
   - component: {fileID: 40012}
-  - component: {fileID: 40011}
   - component: {fileID: 40010}
   - component: {fileID: 40009}
+  - component: {fileID: 40011}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -172,18 +172,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.122959316}
+  m_Offset: {x: -0.078335404, y: -0.1419828}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.42, y: 3.54}
+    oldSize: {x: 0.9661017, y: 1}
     newSize: {x: 3.42, y: 3.54}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.7, y: 3.3540812}
+  m_Size: {x: 0.63317657, y: 0.7160344}
   m_EdgeRadius: 0
 --- !u!95 &40012
 Animator:
@@ -251,8 +251,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.02, y: -0.2, z: 0}
-  m_LocalScale: {x: 1.1576854, y: 1, z: 1}
+  m_LocalPosition: {x: 3.02, y: -1.287, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1554167234}
   m_Father: {fileID: 0}
@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 1554167234}
   - component: {fileID: 1554167235}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: OrbSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,8 +385,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1554167233}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.6, z: 0}
-  m_LocalScale: {x: 1.09, y: 1.09, z: 1.09}
+  m_LocalPosition: {x: 0.264, y: 0.327, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 40014}
   m_RootOrder: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10729ed350d6411193367ee1890ae3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orb: {fileID: 1758418990118790, guid: 96d1c807e7fa14b6dbd96ab70f140fc9, type: 2}
+  orb: {fileID: 114602906594022522, guid: 96d1c807e7fa14b6dbd96ab70f140fc9, type: 2}
 --- !u!1 &1594400867
 GameObject:
   m_ObjectHideFlags: 0
