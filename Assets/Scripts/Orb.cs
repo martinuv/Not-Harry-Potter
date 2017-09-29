@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrbShit : MonoBehaviour
+public class Orb : MonoBehaviour
 {
 	[Header("Sprites")]
 	[SerializeField] Sprite fire;
@@ -21,6 +21,14 @@ public class OrbShit : MonoBehaviour
 
 		localToMouse.Normalize();
 		rb.AddForce (localToMouse * 500);
+	}
+
+	void FixedUpdate ()
+	{
+		if (transform.position.y < -100)
+		{
+			Destroy(gameObject);
+		}
 	}
 
 	void OnTriggerEnter (Collider other)
