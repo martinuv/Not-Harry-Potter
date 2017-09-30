@@ -9,25 +9,27 @@ public class Orb : MonoBehaviour
 	[SerializeField] Sprite ice;
 	[SerializeField] Sprite inert;
 
+	private Rigidbody2D rb2d;
 	private string element;
 
 	void Start ()
 	{
-		Rigidbody2D rb = GetComponent<Rigidbody2D> ();
+		rb2d = GetComponent<Rigidbody2D> ();
 
 		Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		Vector2 localPos = gameObject.transform.position;
 		Vector2 localToMouse = mouseWorldPos - localPos;
 
 		localToMouse.Normalize();
-		rb.AddForce (localToMouse * 500);
+		rb2d.AddForce (localToMouse * 500);
 	}
 
 	void FixedUpdate ()
 	{
 		if (transform.position.y < -100)
 		{
-			Destroy(gameObject);
+			rb2d.isKinematic = true;
+			rb2d.velocity = new Vector2();
 		}
 	}
 
