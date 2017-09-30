@@ -10,12 +10,16 @@ public class Orb : MonoBehaviour
 	[SerializeField] Sprite inert;
 
 	private Rigidbody2D rb2d;
-	private string element;
+	private SpriteRenderer sr;
+
+	void Awake ()
+	{
+		rb2d = GetComponent<Rigidbody2D>();
+		sr = GetComponent<SpriteRenderer>();
+	}
 
 	void Start ()
 	{
-		rb2d = GetComponent<Rigidbody2D> ();
-
 		Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 		Vector2 localPos = gameObject.transform.position;
 		Vector2 localToMouse = mouseWorldPos - localPos;
@@ -42,38 +46,20 @@ public class Orb : MonoBehaviour
 		print("Triggered");
 	}
 
-	public void ChangeElement (string newElement)
+	public void ignite ()
 	{
-		element = newElement;
-
-		switch (element)
-		{
-		case ("Fire"):
-			ignite();
-			break;
-		case ("Ice"):
-			freeze();
-			break;
-		default:
-			Debug.LogError("Unexpected element encountered");
-			element = "Inert";
-			revert();
-			break;
-		}
+		sr.sprite = fire;
+		print("IT'S LIT!");
 	}
 
-	private void ignite ()
+	public void freeze ()
 	{
-		
-	}
-
-	private void freeze ()
-	{
+		sr.sprite = ice;
 		//change material to slide
 	}
 
-	private void revert ()
+	public void revert ()
 	{
-
+		sr.sprite = inert;
 	}
 }
