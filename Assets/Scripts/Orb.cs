@@ -49,11 +49,13 @@ public class Orb : Elemental
 	override public void ignite ()
 	{
 		sr.sprite = fire;
+		curElement = Element.fire;
 	}
 
 	override public void freeze ()
 	{
 		sr.sprite = ice;
+		curElement = Element.ice;
 		//change material to slide
 	}
 
@@ -61,4 +63,19 @@ public class Orb : Elemental
 	{
 		sr.sprite = inert;
 	}
+	void OnCollisionEnter2D (Collision2D other)
+	{
+		/*if (other is IElemental)*/
+
+		if (other.gameObject.GetComponent<ElementalPlatformController> () != null) {
+			ElementalPlatformController platform = other.gameObject.GetComponent<ElementalPlatformController> ();
+			if (curElement == Element.fire) {
+				platform.ignite ();
+			} else if (curElement == Element.ice) {
+				print ("on collision enter");
+				platform.freeze ();
+			}
+		}
+
+}
 }

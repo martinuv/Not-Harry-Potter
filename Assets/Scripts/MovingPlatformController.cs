@@ -25,6 +25,7 @@ public class MovingPlatformController : MonoBehaviour {
 	{
 		actSpeed=speed;
 	}
+
 	void Update () {
 		if(horizontal){
 			Vector3 deltaPos = new Vector3 ();
