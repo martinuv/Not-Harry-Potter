@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Orb : MonoBehaviour
+public class Orb : Elemental
 {
 	[Header("Sprites")]
 	[SerializeField] Sprite fire;
 	[SerializeField] Sprite ice;
 	[SerializeField] Sprite inert;
 
+	private string curElement;
 	private Rigidbody2D rb2d;
 	private SpriteRenderer sr;
 
@@ -39,20 +40,18 @@ public class Orb : MonoBehaviour
 
 	void OnTriggerEnter (Collider other)
 	{
-		/*if (other.gameObject is IElemental)
+		if (other.gameObject is Elemental)
 		{
-			
-		}*/
-		print("Triggered");
+			print("Triggered");
+		}
 	}
 
-	public void ignite ()
+	override public void ignite ()
 	{
 		sr.sprite = fire;
-		print("IT'S LIT!");
 	}
 
-	public void freeze ()
+	override public void freeze ()
 	{
 		sr.sprite = ice;
 		//change material to slide

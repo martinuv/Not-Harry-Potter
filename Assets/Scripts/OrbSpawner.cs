@@ -8,7 +8,7 @@ public class OrbSpawner : MonoBehaviour
 
 	private List<Orb> orbs = new List<Orb>(6);
 
-	void FixedUpdate ()
+	void Update ()
 	{
 		if (Input.GetMouseButtonDown (0)) {
 			Orb newOrb = Instantiate (orb, gameObject.transform);

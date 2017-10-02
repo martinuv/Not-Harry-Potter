@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElementalArea : MonoBehaviour {
-
+public class ElementalArea : Elemental
+{
 	[SerializeField] bool startIgnited;
 	[SerializeField] bool startFrozen;
 
@@ -35,12 +35,12 @@ public class ElementalArea : MonoBehaviour {
 		}
 	}
 
-	public void ignite ()
+	override public void ignite ()
 	{
 		curElement = Element.fire;
 	}
 
-	public void freeze ()
+	 override public void freeze ()
 	{
 		curElement = Element.ice;
 	}
@@ -49,9 +49,4 @@ public class ElementalArea : MonoBehaviour {
 	{
 		curElement = null;
 	}
-}
-
-public static class Element {
-	public static readonly string fire = "fire";
-	public static readonly string ice = "ice";
 }
