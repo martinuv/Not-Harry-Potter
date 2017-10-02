@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4158097857972936}
   - component: {fileID: 114229091534252960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OrbSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4059666620823410}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 114783502067760310}
   - component: {fileID: 61592504291228400}
   - component: {fileID: 95618045037150048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1896188892633408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.02, y: 1.053, z: 0}
+  m_LocalPosition: {x: 2.557, y: 1.153, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4158097857972936}
@@ -139,7 +139,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9661017, y: 1}
+    oldSize: {x: 1.14, y: 1.18}
     newSize: {x: 3.42, y: 3.54}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -191,8 +191,8 @@ MonoBehaviour:
   maxSpeed: 10
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1
-  groundCheck: {fileID: 0}
+    m_Bits: 4294967039
+  groundCheck: {fileID: 4059666620823410}
   jumpForce: 200
 --- !u!212 &212905828862476616
 SpriteRenderer:

@@ -8,6 +8,8 @@ public abstract class Elemental : MonoBehaviour
 
 	public abstract void ignite();
 	public abstract void freeze();
+
+
 }
 
 public static class Element {

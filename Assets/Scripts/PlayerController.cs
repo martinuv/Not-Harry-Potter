@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour {
 	public Transform groundCheck;
 	public float jumpForce = 700f;
 	private SpriteRenderer spriteRenderer;
+
+	private Transform curRespawn;
+
 	void Start()
 	{
 		anim = GetComponent<Animator> ();
@@ -35,15 +38,17 @@ public class PlayerController : MonoBehaviour {
 		else if (move < 0 && facingRight)
 			Flip ();
 
+		if (transform.position.y < CameraController.getLowerBound() - 2) {
+			Respawn();
+		}
 	}
+
 	void Update()
 	{
-		
 		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
 			anim.SetBool ("Ground", false);
 			rbg.AddForce (new Vector2 (0, jumpForce));
 		}
-
 	}
 
 	void Flip()
@@ -52,6 +57,11 @@ public class PlayerController : MonoBehaviour {
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	private void Respawn()
+	{
+		transform.position = curRespawn.position;
 	}
 
 

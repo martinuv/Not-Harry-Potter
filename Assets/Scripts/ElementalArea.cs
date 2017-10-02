@@ -40,7 +40,7 @@ public class ElementalArea : Elemental
 		curElement = Element.fire;
 	}
 
-	 override public void freeze ()
+	override public void freeze ()
 	{
 		curElement = Element.ice;
 	}
