@@ -77,6 +77,7 @@ public class PlayerController : MonoBehaviour {
 			transform.SetParent (c.transform); 
 
 		}
+
 	}
 	private void OnCollisionExit2D(Collision2D d)
 	{
@@ -85,4 +86,11 @@ public class PlayerController : MonoBehaviour {
 			transform.SetParent (null);
 		}
 	}
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "hazard") {
+			Respawn ();
+		}
+	}
+
 }
