@@ -15,10 +15,11 @@ public class PlayerController : MonoBehaviour {
 	public float jumpForce = 700f;
 	private SpriteRenderer spriteRenderer;
 
-	private Transform curRespawn;
+	private Vector2 curRespawn;
 
 	void Start()
 	{
+		curRespawn = transform.position;
 		anim = GetComponent<Animator> ();
 		//spriteRenderer = GetComponent < SpriteRenderer> ();
 		rbg = GetComponent<Rigidbody2D> ();
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour {
 		else if (move < 0 && facingRight)
 			Flip ();
 
-		if (transform.position.y < CameraController.getLowerBound() - 2) {
+		if (transform.position.y < CameraController.getLowerBound() - 10) {
 			Respawn();
 		}
 	}
@@ -61,8 +62,35 @@ public class PlayerController : MonoBehaviour {
 
 	private void Respawn()
 	{
-		transform.position = curRespawn.position;
+		transform.position = curRespawn;
 	}
 
+	public void setRespawn ()
+	{
+		
+	}
+
+	private void OnCollisionEnter2D(Collision2D c)
+	{
+		if(c.gameObject.tag == "platform")
+		{
+			transform.SetParent (c.transform); 
+
+		}
+
+	}
+	private void OnCollisionExit2D(Collision2D d)
+	{
+		if(d.gameObject.tag == "platform")
+		{
+			transform.SetParent (null);
+		}
+	}
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "hazard") {
+			Respawn ();
+		}
+	}
 
 }

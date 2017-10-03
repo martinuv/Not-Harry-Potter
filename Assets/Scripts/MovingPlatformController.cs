@@ -68,6 +68,7 @@ public class MovingPlatformController : MonoBehaviour {
 		yield return new WaitForSeconds (_delay);
 		actSpeed = speed;
 	}
+		
 
 }
 
