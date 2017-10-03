@@ -4,12 +4,10 @@ using UnityEngine;
 
 public abstract class Elemental : MonoBehaviour
 {
-	private string curElement;
+	//private string curElement;
 
-	public abstract void ignite();
-	public abstract void freeze();
-
-
+	public abstract void Ignite();
+	public abstract void Freeze();
 }
 
 public static class Element {

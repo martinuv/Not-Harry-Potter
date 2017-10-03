@@ -12,9 +12,9 @@ public class ElementalArea : Elemental
 	// Use this for initialization
 	void Start () {
 		if (startIgnited)
-			ignite();
+			Ignite();
 		else if (startFrozen)
-			freeze();
+			Freeze();
 	}
 	
 	// Update is called once per frame
@@ -28,19 +28,19 @@ public class ElementalArea : Elemental
 		if (other.gameObject.GetComponent<Orb> () != null) {
 			Orb orb = other.gameObject.GetComponent<Orb> ();
 			if (curElement == Element.fire) {
-				orb.ignite();
+				orb.Ignite();
 			} else if (curElement == Element.ice) {
-				orb.freeze();
+				orb.Freeze();
 			}
 		}
 	}
 
-	override public void ignite ()
+	override public void Ignite ()
 	{
 		curElement = Element.fire;
 	}
 
-	override public void freeze ()
+	override public void Freeze ()
 	{
 		curElement = Element.ice;
 	}

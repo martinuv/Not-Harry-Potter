@@ -123,3 +123,4 @@ MonoBehaviour:
   horizontal: 0
   reveseDirection: 0
   _delay: 0
+  pause: 0

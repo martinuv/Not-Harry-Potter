@@ -67,13 +67,13 @@ public class ElementalPlatformController : Elemental {
 			}
 		}
 	}
-	override public void ignite ()
+	override public void Ignite ()
 	{
 		curElement = Element.fire;
 		pause = false;
 	}
 
-	override public void freeze ()
+	override public void Freeze ()
 	{
 		curElement = Element.ice;
 		pause = true;

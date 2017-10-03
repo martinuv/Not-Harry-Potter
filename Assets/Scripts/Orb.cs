@@ -40,19 +40,16 @@ public class Orb : Elemental
 
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.gameObject is Elemental)
-		{
-			print("Triggered");
-		}
+		
 	}
 
-	override public void ignite ()
+	override public void Ignite ()
 	{
 		sr.sprite = fire;
 		curElement = Element.fire;
 	}
 
-	override public void freeze ()
+	override public void Freeze ()
 	{
 		sr.sprite = ice;
 		curElement = Element.ice;
@@ -67,15 +64,15 @@ public class Orb : Elemental
 	{
 		/*if (other is IElemental)*/
 
-		if (other.gameObject.GetComponent<ElementalPlatformController> () != null) {
-			ElementalPlatformController platform = other.gameObject.GetComponent<ElementalPlatformController> ();
+		if (other.gameObject.GetComponent<Elemental>()) {
+			Elemental elemental = other.gameObject.GetComponent<Elemental> ();
 			if (curElement == Element.fire) {
-				platform.ignite ();
+				elemental.Ignite ();
 			} else if (curElement == Element.ice) {
-				print ("on collision enter");
-				platform.freeze ();
+				elemental.Freeze ();
 			}
 		}
-
-}
+        OrbSpawner.orbs.Remove(this);
+        Destroy(gameObject);
+    }
 }

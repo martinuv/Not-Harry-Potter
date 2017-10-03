@@ -6,7 +6,7 @@ public class OrbSpawner : MonoBehaviour
 {
 	[SerializeField] Orb orb;
 
-	private List<Orb> orbs = new List<Orb>(6);
+	public static List<Orb> orbs = new List<Orb>(6);
 
 	void Update ()
 	{
