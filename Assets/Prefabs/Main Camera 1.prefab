@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23456c01febfe4284820a0d2f9e0e505, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 0}
+  _player: {fileID: 1702902807057090, guid: c40fb842ab19dbb42a8d8f1cd30759e3, type: 2}
   upperBound: 20
   lowerBound: -20
   leftBound: -65
