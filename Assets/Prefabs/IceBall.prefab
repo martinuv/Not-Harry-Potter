@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4660603824135860}
   - component: {fileID: 212628279227883594}
-  - component: {fileID: 61832473814498440}
   - component: {fileID: 114708073751186508}
+  - component: {fileID: 58322693871010882}
   m_Layer: 0
   m_Name: IceBall
   m_TagString: Untagged
@@ -36,14 +36,14 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1720884529951040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.06, y: 2.309, z: 0}
+  m_LocalPosition: {x: 7.764727, y: 5.119087, z: 0}
   m_LocalScale: {x: 3.5000002, y: 2.817407, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &61832473814498440
-BoxCollider2D:
+--- !u!58 &58322693871010882
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -54,19 +54,9 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.003737934, y: 0.004643619}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.23}
-    newSize: {x: 0.66, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0.011277593}
   serializedVersion: 2
-  m_Size: {x: 0.1890109, y: 0.24064642}
-  m_EdgeRadius: 0
+  m_Radius: 0.10276562
 --- !u!114 &114708073751186508
 MonoBehaviour:
   m_ObjectHideFlags: 1
