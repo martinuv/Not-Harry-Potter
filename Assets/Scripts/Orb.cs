@@ -8,6 +8,8 @@ public class Orb : Elemental
 	[SerializeField] Sprite fire;
 	[SerializeField] Sprite ice;
 	[SerializeField] Sprite inert;
+    [Space]
+    [SerializeField] float orbVelocity;
 
 	private string curElement;
 	private Rigidbody2D rb2d;
@@ -25,9 +27,17 @@ public class Orb : Elemental
 		Vector2 localPos = gameObject.transform.position;
 		Vector2 localToMouse = mouseWorldPos - localPos;
 
-		localToMouse.Normalize();
-        rb2d.velocity = localToMouse * 5;
-		//rb2d.AddForce (localToMouse * 500);
+        if (transform.lossyScale.x > 0 && localToMouse.x < 0)
+        {
+            localToMouse.x *= -1;
+        }
+        else if (transform.lossyScale.x < 0 && localToMouse.x > 0)
+        {
+            localToMouse.x *= -1;
+        }
+
+        localToMouse.Normalize();
+        rb2d.velocity = localToMouse * orbVelocity;
 	}
 
 	void FixedUpdate ()
