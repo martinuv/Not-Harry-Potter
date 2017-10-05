@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
 	{
 		curRespawn = transform.position;
 		anim = GetComponent<Animator> ();
-		//spriteRenderer = GetComponent < SpriteRenderer> ();
+		//spriteRenderer = GetComponent <SpriteRenderer> ();
 		rbg = GetComponent<Rigidbody2D> ();
 	}
 
@@ -83,18 +83,24 @@ public class PlayerController : MonoBehaviour {
 		}
 
 	}
-	private void OnCollisionExit2D(Collision2D d)
+
+    private void OnCollisionExit2D(Collision2D d)
 	{
 		if(d.gameObject.tag == "platform")
 		{
 			transform.SetParent (null);
 		}
 	}
-	private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "hazard") {
 			Respawn ();
 		}
 	}
 
+    public bool GetFacingRight()
+    {
+        return facingRight;
+    }
 }
