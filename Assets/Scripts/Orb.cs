@@ -31,10 +31,10 @@ public class Orb : Elemental
 
 	void FixedUpdate ()
 	{
-		if (transform.position.y < -100)
+		if (transform.position.y < CameraController.getLowerBound() - 10)
 		{
-			rb2d.isKinematic = true;
-			rb2d.velocity = new Vector2();
+            OrbSpawner.orbs.Remove(this);
+            Destroy(gameObject);
 		}
 	}
 
