@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
 	public float jumpForce = 700f;
 	private SpriteRenderer spriteRenderer;
 
+    public Sprite jumping;
+
 	private Vector2 curRespawn;
 
 	void Start()
@@ -29,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 	void FixedUpdate ()
 	{
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		anim.SetBool ("Ground", grounded);
+        anim.SetBool ("Ground", grounded);
 		float move = Input.GetAxis ("Horizontal");
 		anim.SetFloat ("vSpeed", rbg.velocity.y);
 		anim.SetFloat ("Speed", Mathf.Abs (move));

@@ -39,6 +39,8 @@ public class Flammable : Elemental
             curElement = Element.fire;
             sr.sprite = onFire;
             col.sharedMaterial = originalMaterial;
+            col.enabled = false;
+            col.enabled = true;
             burnRoutine = BurnRoutine(burnTime);
             StartCoroutine(burnRoutine);
         }
@@ -63,6 +65,9 @@ public class Flammable : Elemental
             curElement = Element.ice;
             sr.sprite = frozen;
             col.sharedMaterial = frozenMaterial;
+            col.enabled = false;
+            col.enabled = true;
+            print(gameObject.GetComponent<Collider2D>().friction);
         }
     }
 }
