@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour {
 
 	void Update()
 	{
-		if (grounded && Input.GetKeyDown (KeyCode.Space)) {
+		if (grounded && (Input.GetKeyDown (KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))) {
 			anim.SetBool ("Ground", false);
 			rbg.AddForce (new Vector2 (0, jumpForce));
 		}
