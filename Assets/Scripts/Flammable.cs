@@ -67,7 +67,6 @@ public class Flammable : Elemental
             col.sharedMaterial = frozenMaterial;
             col.enabled = false;
             col.enabled = true;
-            print(gameObject.GetComponent<Collider2D>().friction);
         }
     }
 }
