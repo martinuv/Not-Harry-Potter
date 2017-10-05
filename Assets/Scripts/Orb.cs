@@ -26,7 +26,8 @@ public class Orb : Elemental
 		Vector2 localToMouse = mouseWorldPos - localPos;
 
 		localToMouse.Normalize();
-		rb2d.AddForce (localToMouse * 500);
+        rb2d.velocity = localToMouse * 5;
+		//rb2d.AddForce (localToMouse * 500);
 	}
 
 	void FixedUpdate ()
