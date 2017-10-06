@@ -36,7 +36,9 @@ public class Flammable : Elemental
             curElement = null;
             sr.sprite = originalSprite;
             col.sharedMaterial = originalMaterial;
-            rb2d.isKinematic = true;
+            col.enabled = false;
+            col.enabled = true;
+            rb2d.mass = 300;
         }
         else if (curElement == null)
         {
@@ -71,7 +73,9 @@ public class Flammable : Elemental
             col.sharedMaterial = frozenMaterial;
             col.enabled = false;
             col.enabled = true;
-            rb2d.isKinematic = false;
+            /*rb2d.isKinematic = false;
+            rb2d.freezeRotation = false;*/
+            rb2d.mass = 30;
         }
     }
 }
