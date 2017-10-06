@@ -42,7 +42,7 @@ public class Orb : Elemental
 
 	void FixedUpdate ()
 	{
-		if (transform.position.y < CameraController.getLowerBound() - 10)
+		if (transform.position.y < CameraController.GetLowerBound() - 10)
 		{
             OrbSpawner.orbs.Remove(this);
             Destroy(gameObject);

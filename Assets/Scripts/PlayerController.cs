@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
 		else if (move < 0 && facingRight)
 			Flip ();
 
-		if (transform.position.y < CameraController.getLowerBound() - 10) {
+		if (transform.position.y < CameraController.GetLowerBound() - 10) {
 			Respawn();
 		}
 	}

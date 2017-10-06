@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour {
 		transform.position = destVec;
 	}
 
-	public static float getLowerBound() {
+	public static float GetLowerBound() {
 		return camControl.lowerBound;
 	}
 }
