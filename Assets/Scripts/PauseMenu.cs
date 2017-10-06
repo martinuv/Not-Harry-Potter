@@ -47,5 +47,6 @@ public class PauseMenu : MonoBehaviour {
 	public void GoToMainMenu(){
 		GameManager.gameState = GameManager.GameState.MainMenu;
 		GameManager.LoadScene (mainMenuScene);
+		GameManager.Unpause ();
 	}
 }
