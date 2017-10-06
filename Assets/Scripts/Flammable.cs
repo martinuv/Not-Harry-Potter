@@ -14,6 +14,7 @@ public class Flammable : Elemental
     private Sprite originalSprite;
     private Collider2D col;
     private PhysicsMaterial2D originalMaterial;
+    private Rigidbody2D rb2d;
 
     private string curElement;
 
@@ -24,6 +25,8 @@ public class Flammable : Elemental
 
         col = GetComponent<Collider2D>();
         originalMaterial = col.sharedMaterial;
+
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     public override void Ignite()
@@ -33,6 +36,7 @@ public class Flammable : Elemental
             curElement = null;
             sr.sprite = originalSprite;
             col.sharedMaterial = originalMaterial;
+            rb2d.isKinematic = true;
         }
         else if (curElement == null)
         {
@@ -67,6 +71,7 @@ public class Flammable : Elemental
             col.sharedMaterial = frozenMaterial;
             col.enabled = false;
             col.enabled = true;
+            rb2d.isKinematic = false;
         }
     }
 }
