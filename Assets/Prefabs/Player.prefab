@@ -315,7 +315,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294966015
   groundCheck: {fileID: 4324276349375532}
-  jumpForce: 400
+  jumpForce: 250
   jumping: {fileID: 0}
 --- !u!212 &212981733886841584
 SpriteRenderer:
