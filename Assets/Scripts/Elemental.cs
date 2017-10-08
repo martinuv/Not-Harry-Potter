@@ -1,11 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Elemental : MonoBehaviour
 {
-	//private string curElement;
-
 	public abstract void Ignite();
 	public abstract void Freeze();
 }

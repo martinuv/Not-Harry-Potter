@@ -1,33 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;using UnityEngine;public class OrbSpawner : MonoBehaviour{	[SerializeField] Orb orb;	public static List<Orb> orbs = new List<Orb>(6);    private Animator anim;    private bool mAxisInUse = false;    void Awake()    {        anim = GetComponentInParent<Animator>();    }    void Update ()	{		if (Input.GetAxisRaw("Fire1") != 0)
+        {
+            if (!mAxisInUse)
+            {
+                anim.SetTrigger("Cast");
 
-public class OrbSpawner : MonoBehaviour
-{
-	[SerializeField] Orb orb;
+                Orb newOrb = Instantiate(orb, gameObject.transform);
+                newOrb.transform.parent = null;
 
-	public static List<Orb> orbs = new List<Orb>(6);
+                orbs.Add(newOrb);
+                if (orbs.Count > 5)
+                {
+                    Destroy(orbs[0].gameObject);
+                    orbs.RemoveAt(0);
+                }
 
-    private Animator anim;
-
-    void Awake()
-    {
-        anim = GetComponentInParent<Animator>();
-    }
-
-    void Update ()
-	{
-		if (Input.GetMouseButtonDown (0)) {
-			Orb newOrb = Instantiate (orb, gameObject.transform);
-			newOrb.transform.parent = null;
-
-            anim.SetTrigger("Cast");
-
-			orbs.Add (newOrb);
-			if (orbs.Count > 5) {
-				Destroy(orbs[0].gameObject);
-				orbs.RemoveAt(0);
-			}
-		}
-	}
-}
+                mAxisInUse = true;
+            }
+		}        if (Input.GetAxisRaw("Fire1") == 0)
+        {
+            mAxisInUse = false;
+        }	}}

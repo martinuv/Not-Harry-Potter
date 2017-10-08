@@ -1,22 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class CameraController : MonoBehaviour {
-
-	public GameObject _player;
-	public float upperBound;
-	public float lowerBound;
-	public float leftBound;
+public class CameraController : MonoBehaviour
+{
+	[SerializeField] GameObject _player;
+	[SerializeField] float upperBound;
+	[SerializeField] float lowerBound;
+	[SerializeField] float leftBound;
 
 	private static CameraController camControl;
-	// Use this for initialization
-	void Awake () {
+
+    void Awake ()
+    {
 		camControl = this;
 	}
 
-	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		Vector3 destVec = _player.transform.position;
 		destVec.x = Mathf.Max (_player.transform.position.x, leftBound);
 		destVec.y = Mathf.Max (lowerBound,Mathf.Min(upperBound,_player.transform.position.y));
@@ -24,7 +23,8 @@ public class CameraController : MonoBehaviour {
 		transform.position = destVec;
 	}
 
-	public static float GetLowerBound() {
+	public static float GetLowerBound()
+    {
 		return camControl.lowerBound;
 	}
 }

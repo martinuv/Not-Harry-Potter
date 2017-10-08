@@ -168,7 +168,6 @@ MonoBehaviour:
   radius: 4
   horizontal: 0
   reveseDirection: 0
-  _delay: 0
   pause: 1
 --- !u!4 &7168795
 Transform:
@@ -354,10 +353,52 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4627189994785440, guid: 9a68f7912a27147e3bf376d9654b02a4, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a68f7912a27147e3bf376d9654b02a4, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &109039968
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4616918058834558, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616918058834558, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616918058834558, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616918058834558, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616918058834558, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616918058834558, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616918058834558, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616918058834558, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f6b59b66ec90c51488d267271e7e12f6, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &113108300
 GameObject:
@@ -938,7 +979,6 @@ MonoBehaviour:
   radius: 4
   horizontal: 0
   reveseDirection: 0
-  _delay: 0
   pause: 1
 --- !u!4 &699444930
 Transform:
@@ -1103,7 +1143,6 @@ MonoBehaviour:
   radius: 4
   horizontal: 0
   reveseDirection: 0
-  _delay: 0
   pause: 1
 --- !u!4 &754943673
 Transform:
@@ -1835,7 +1874,6 @@ MonoBehaviour:
   radius: 1.5
   horizontal: 1
   reveseDirection: 0
-  _delay: 0
   pause: 1
 --- !u!4 &1187220632
 Transform:
@@ -1986,7 +2024,6 @@ MonoBehaviour:
   radius: 3
   horizontal: 0
   reveseDirection: 0
-  _delay: 0
   pause: 1
 --- !u!4 &1225060817
 Transform:
