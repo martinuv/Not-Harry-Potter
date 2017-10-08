@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 114322930269372836}
   - component: {fileID: 61783973268493944}
   m_Layer: 0
-  m_Name: Platform1
+  m_Name: Long Platform
   m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,11 +227,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb3bd567f523418c8c00c074549c0db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _delay: 0
   speed: 5
   radius: 5
   horizontal: 0
   reveseDirection: 0
-  _delay: 0
   pause: 1
 --- !u!212 &212329215469860270
 SpriteRenderer:
