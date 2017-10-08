@@ -334,7 +334,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Use Arrow Keys to Move\nMouse Click to Shoot \n'Tab' to Pause"
+  m_Text: "Use Arrow Keys to Move\nMouse Click to Shoot \n'Tab' to Pause\n'R' to Restart"
 --- !u!114 &114524842985255934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -644,7 +644,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -310}
-  m_SizeDelta: {x: 650, y: 150}
+  m_SizeDelta: {x: 650, y: 170}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224237603902653192
 RectTransform:
