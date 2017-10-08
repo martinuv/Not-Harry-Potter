@@ -53,6 +53,10 @@ public class PlayerController : MonoBehaviour {
 			anim.SetBool ("Ground", false);
 			rbg.AddForce (new Vector2 (0, jumpForce));
 		}
+
+        if (Input.GetKeyDown(KeyCode.R)) {
+            Respawn();
+        }
 	}
 
 	void Flip()
