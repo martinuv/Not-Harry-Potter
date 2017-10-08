@@ -147,6 +147,51 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 224181781421301838, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.33175
+      objectReference: {fileID: 0}
+    - target: {fileID: 224181781421301838, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224181781421301838, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224181781421301838, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.66981244
+      objectReference: {fileID: 0}
+    - target: {fileID: 224181781421301838, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.12144445
+      objectReference: {fileID: 0}
+    - target: {fileID: 224181781421301838, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224181781421301838, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224181781421301838, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.29355556
+      objectReference: {fileID: 0}
+    - target: {fileID: 114733369655632398, guid: a5ca459294cfb324ebd50c3f5701dc81,
+        type: 2}
+      propertyPath: m_Text
+      value: Wizard Sim 2017 GOTY
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5ca459294cfb324ebd50c3f5701dc81, type: 2}
   m_IsPrefabParent: 0
