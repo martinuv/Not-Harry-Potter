@@ -71,19 +71,18 @@ public class ElementalPlatformController : Elemental {
 	{
 		curElement = Element.fire;
 		pause = false;
+        SoundController.PlayWhoosh();
 	}
 
 	override public void Freeze ()
 	{
 		curElement = Element.ice;
 		pause = true;
-
+        SoundController.PlayFreeze();
 	}
+
 	IEnumerator delay(){
 		yield return new WaitForSeconds (_delay);
 		actSpeed = speed;
 	}
-
-
-
 }

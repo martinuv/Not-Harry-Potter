@@ -58,13 +58,14 @@ public class Orb : Elemental
 	{
 		sr.sprite = fire;
 		curElement = Element.fire;
+        SoundController.PlayWhoosh();
 	}
 
 	override public void Freeze ()
 	{
 		sr.sprite = ice;
 		curElement = Element.ice;
-		//change material to slide
+        SoundController.PlayFreeze();
 	}
 
 	public void revert ()
@@ -73,8 +74,6 @@ public class Orb : Elemental
 	}
 	void OnCollisionEnter2D (Collision2D other)
 	{
-		/*if (other is IElemental)*/
-
 		if (other.gameObject.GetComponent<Elemental>()) {
 			Elemental elemental = other.gameObject.GetComponent<Elemental> ();
 			if (curElement == Element.fire) {

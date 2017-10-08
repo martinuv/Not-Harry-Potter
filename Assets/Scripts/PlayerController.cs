@@ -69,8 +69,9 @@ public class PlayerController : MonoBehaviour {
 
 	private void Respawn()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-		transform.position = curRespawn;
+        SoundController.PlayDeath();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        transform.position = curRespawn;
 	}
 
 	public void setRespawn ()
